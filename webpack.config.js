@@ -14,7 +14,7 @@ module.exports = {
   output: {
     publicPath: '/dist/',
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].js',
   },
   module: {
     rules: [{
@@ -45,11 +45,7 @@ module.exports = {
   devtool: 'source-map',
   externals: [],
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
     port: 9000,
-    historyApiFallback: true,
-    publicPath: '/',
-    open: true
+    historyApiFallback: true
   }
 };
