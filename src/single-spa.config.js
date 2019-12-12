@@ -9,4 +9,10 @@ registerApplication(
   location => true
 );
 
+registerApplication(
+  'movieStockApp',
+  () => import('./movie_stock_app/src/movieStock.app'),
+  location => true
+);
+
 start();

@@ -30,6 +30,17 @@ module.exports = {
         exclude: [path.resolve(__dirname, 'node_modules')],
         loader: 'babel-loader',
       }, {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-react']
+            }
+          }
+        ],
+      }, {
         // This plugin will allow us to use AngularJS HTML templates
         test: /\.html$/,
         exclude: /node_modules/,
@@ -44,6 +55,10 @@ module.exports = {
             loader: 'file-loader',
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        loader: 'svg-inline-loader'
       }
     ]
   },
@@ -52,6 +67,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, 'node_modules')],
+    extensions: ['*', '.js', '.jsx']
   },
   plugins: [
     // A webpack plugin to remove/clean the output folder before building
