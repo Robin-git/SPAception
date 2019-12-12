@@ -5,7 +5,7 @@ import {
 
 registerApplication(
   'movieSearchApp',
-  () => import(/* webpackIgnore: true */ 'http://localhost:8081'),
+  () => import('./movie_search_app/src/main'),
   location => true
 );
 

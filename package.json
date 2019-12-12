@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/Robin-git/SPAception#readme",
   "dependencies": {
-    "single-spa": "^4.4.1"
+    "single-spa": "^4.4.1",
+    "single-spa-vue": "^1.5.4",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@babel/core": "^7.7.5",
@@ -30,9 +32,12 @@
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.3.0",
+    "file-loader": "^5.0.2",
     "html-loader": "^0.5.5",
     "style-loader": "^1.0.1",
     "systemjs": "^6.1.7",
+    "vue-loader": "^15.7.2",
+    "vue-template-compiler": "^2.6.10",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
